@@ -14,7 +14,7 @@
         ><i class="fas fa-info"></i>&nbsp;  About</router-link
       >
     </nav>
-    <router-link class="bg-yellow-700 text-white rounded p-4 hover:bg-gray-600 transition duration-200" to="/"
+    <router-link class="bg-yellow-700 text-white rounded p-4 hover:bg-yellow-600 transition duration-200" to="/"
       ><i class="fas fa-shopping-cart"></i>&nbsp;  Cart</router-link
     >
   </header>
