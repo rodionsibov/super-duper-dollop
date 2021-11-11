@@ -1,6 +1,6 @@
 <template>
-  <header class="flex justify-between items-center p-4 bg-gray-800">
-    <nav class="space-x-2">
+  <header class="flex flex-col justify-between md:items-center p-4 bg-gray-800 gap-2">
+    <nav class="md:space-x-2 flex flex-col space-y-2">
       <router-link class="bg-gray-700 text-white rounded p-4 hover:bg-gray-600 transition duration-200" to="/"
         ><i class="fas fa-utensils"></i>&nbsp; Home</router-link
       >
@@ -14,7 +14,7 @@
         ><i class="fas fa-info"></i>&nbsp;  About</router-link
       >
     </nav>
-    <router-link class="bg-gray-700 text-white rounded p-4 hover:bg-gray-600 transition duration-200" to="/"
+    <router-link class="bg-yellow-700 text-white rounded p-4 hover:bg-gray-600 transition duration-200" to="/"
       ><i class="fas fa-shopping-cart"></i>&nbsp;  Cart</router-link
     >
   </header>
