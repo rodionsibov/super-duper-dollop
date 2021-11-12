@@ -19,7 +19,7 @@
     >
   </header>
 
-  <router-view class="p-4" />
+  <router-view />
 </template>
 
 <style>
