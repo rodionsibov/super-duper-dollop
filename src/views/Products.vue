@@ -1,26 +1,44 @@
 <template>
-  <h1>Products</h1>
-  <div class="rounded bg-gray-200 p-8 m-10 grid grid-cols-1 md:grid-cols-3 gap-10">
-    <div class="p-4" v-for="item in 32" :key="item">
+  <h1 class="m-8 text-3xl text-center">Products</h1>
+  <div
+    class="
+      rounded
+      bg-gray-200
+      p-2
+      md:p-8
+      m-2
+      md:m-10
+      grid grid-cols-1
+      md:grid-cols-2
+      lg:grid-cols-3
+      gap-10
+    "
+  >
+    <div class="p-4" v-for="product in products" :key="product.id">
       <div class="">
-        <div class="text-xl font-semibold">Visual Studio Code</div>
-        <div class="flex gap-2 mt-2">
-          <div class="border-r border-black pr-1">🎶</div>
-          <div>Version 1.62</div>
+        <div class="text-xl font-semibold">{{ product.name }}</div>
+        <div class="flex gap-2 mt-2 text-sm text-gray-500">
+          <div class="border-r border-black pr-2">
+            Review: {{ product.review || 0 }}
+          </div>
+          <div>Rate: {{ product.rate }}</div>
         </div>
       </div>
-      <div class="border-r border-black mt-5 pr-3">
-        A standalone source code editor that runs on Windows, macOS, and Linux.
-        The top pick for Java and web developers, with tons of extensions to
-        support just about any programming language.
+      <div class="md:flex flex-col mt-3">
+        <img :src="product.imageUrl" class="object-cover" alt="" />
+        <div class="mt-3"></div>
+        {{ product.content }}
       </div>
       <div class="text-xs mt-5">
-        By using Visual Studio Code you agree to its
+        By using our product you agree to its
         <span class="underline font-semibold">license</span> &
         <span class="underline font-semibold">privacy statement</span>
       </div>
-      <div class="mt-5 p-3 bg-white font-bold inline-block rounded">
-        Free download
+      <div class="flex items-center justify-between mt-5 gap-4">
+        <div class="text-xl">Price: ${{ product.price.toFixed(2) }}</div>
+        <button class="p-3 bg-gray-900 text-white font-bold inline-block rounded hover:bg-gray-800">
+          Buy Now
+        </button>
       </div>
     </div>
   </div>
