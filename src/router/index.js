@@ -8,9 +8,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    meta: {
-      title: 'Home | Product and Cart'
-    }
   },
   {
     path: '/products',
@@ -38,7 +35,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title
+  document.title = `${to.name} | Product and Cart`
   next()
 })
 
